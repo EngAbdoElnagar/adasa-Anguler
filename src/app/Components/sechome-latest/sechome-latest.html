@@ -1,0 +1,62 @@
+<section id="latest" class="py-5">
+  <div class="container py-5">
+    <div class="headin d-flex justify-content-between my-5">
+      <div class="right">
+        <span class="welc py-1 px-4 my-3 rounded-pill">الأحدث</span>
+        <h2>أحدث المقالات</h2>
+        <p>محتوى جديد طازج من المطبعة</p>
+      </div>
+      <div class="left d-flex align-items-end py-2">
+        <button class="btn rounded-3 py-2 px-4">
+          عرض جميع المقالات
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </button>
+      </div>
+    </div>
+    <div class="latest my-5">
+      <div class="row g-4">
+        @for (item of latestPostsList; track $index) {
+          <div class="col-lg-4 col-md-6">
+            <div class="inner h-100 rounded-4 overflow-hidden">
+              <div class="img-container">
+                <img [src]="item.image" alt="article title" />
+                <span class="badge-cat"> {{ item.category }} </span>
+              </div>
+
+              <div class="info-content py-3 px-2">
+                <p class="time mb-2">
+                  <i class="fa-regular fa-clock me-1"></i> {{ item.readTime }}
+                </p>
+                <h3 class="article-title">{{ item.title }}</h3>
+                <p class="desc">
+                  {{ item.excerpt }}
+                </p>
+
+                <div
+                  class="article-footer border-top d-flex justify-content-between align-items-center mt-4"
+                >
+                  <div class="person pt-3 d-flex align-items-center">
+                    <div class="avatar-wrapper me-2">
+                      <img
+                        [src]="item.author.avatar"
+                        alt="author"
+                        class="rounded-circle border border-secondary"
+                      />
+                    </div>
+                    <div class="author-meta mx-2">
+                      <h4 class="mb-0">{{ item.author.name }}</h4>
+                      <p class="mb-0">{{ item.author.role }}</p>
+                    </div>
+                  </div>
+                  <div class="action-icon">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,138 @@
+.main-footer {
+  background-color: #0a0a0a;
+  color: #a0a0a0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Tajawal', sans-serif;
+}
+
+
+.logo-icon {
+  background-color: #ff6900;
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.footer-title {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -40px; 
+  width: 30px;
+  height: 2px;
+  background-color: #ff6900;
+  transform: translateY(-50%);
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: translateX(-5px);
+  }
+}
+.footer-links li:hover i {
+  /* display: inline; */
+  opacity: 1;
+}
+.footer-links li i {
+  transition: all 0.3s;
+  color: #ff6900;
+  /* display: none; */
+  opacity: 0;
+}
+.footer-links li a {
+padding-inline-start:7px ;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ff6900;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #ff6900;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.newsletter-form .form-control {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.newsletter-form .form-control:focus {
+  box-shadow: none;
+  border-color: #ff6900;
+}
+.form-control::placeholder {
+  color: #a1a1a1;
+}
+
+.btn-orange {
+  background-color: #ff6900;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.btn-orange:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+
+@media (max-width: 767px) {
+  .footer-bottom {
+    text-align: center !important;
+    flex-direction: column; 
+  }
+
+  .footer-text {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .bottom-links {
+    width: 100%;
+    justify-content: center !important;
+  }
+}

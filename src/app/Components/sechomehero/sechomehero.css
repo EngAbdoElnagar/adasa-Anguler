@@ -1,0 +1,148 @@
+#hero {
+  min-height: 100vh;
+  background: #0b0b0b url('../../../assets/bg-grid-glow.svg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+}
+#hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#hero .container .welc {
+  background-color: rgba(36, 22, 11, 0.4);
+  color: #f97316;
+  border: 1px solid #ff8904;
+  font-size: 14px;
+}
+#hero .container h1 {
+  text-align: center;
+  font-size: 72px;
+  font-weight: 700;
+  color: #fff;
+  span {
+    color: #fa9e1e;
+  }
+}
+#hero .container .desc {
+  font-size: 24px;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+#hero .container .btns .btn {
+  padding: 15px 20px;
+  border: 1px solid #a1a1a1;
+  margin: 10px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s;
+}
+#hero .container .btns .btn__1 {
+  background-color: #f66f14;
+  border-color: #f66f14;
+  .fa-arrow-left-long {
+    transition: all 0.3s;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    .fa-arrow-left-long {
+      transform: translateX(-5px);
+    }
+  }
+}
+#hero .container .btns .btn__2 {
+  &:hover {
+    background-color: rgba(36, 22, 11, 0.4);
+    border: 1px solid #ff8904;
+    color: #ff8904;
+  }
+}
+@media screen and (max-width: 576px) {
+  #hero .container .btns .btn {
+    width: 90%;
+  }
+}
+
+#hero .container .boxs {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#hero .container .boxs .inner {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 1 / 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(25, 25, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+#hero .container .boxs .inner:hover {
+  transform: scale(1.05);
+  border-color: #ff6900;
+}
+
+#hero .container .boxs .inner .icon {
+  font-size: 28px;
+  color: #ff6900;
+  margin-bottom: 10px;
+}
+#hero .container .boxs .inner .num {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ff6900;
+  margin: 5px 0;
+}
+#hero .container .boxs .inner .name {
+  font-size: 13px;
+  color: #737373;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  #hero .container .boxs .inner {
+    max-width: 140px;
+    min-height: 120px;
+  }
+}
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  #hero {
+    padding-top: 70px !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
+  #hero .container .boxs .inner {
+    aspect-ratio: 3 / 1;
+    max-width: 200px;
+    max-height: 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #hero {
+    padding-top: 70px !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
+  #hero .container .boxs .inner {
+    aspect-ratio: 3 / 1;
+  }
+}

@@ -1,0 +1,117 @@
+section {
+  min-height: 100vh;
+  background: #0b0b0b url('../../../assets/bg-grid-glow.svg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+}
+h1 {
+  font-size: 180px;
+  font-weight: 900;
+  color: #ff8904;
+}
+.p_1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.p_2 {
+  font-size: 18px;
+  color: #a1a1a1;
+}
+/* ************* */
+.btns .btn {
+  padding: 15px 20px;
+  border: 1px solid #a1a1a1;
+  margin: 10px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s;
+}
+.btns .btn__1 {
+  background-color: #f66f14;
+  border-color: #f66f14;
+  .fa-arrow-left-long {
+    transition: all 0.3s;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    .fa-arrow-left-long {
+      transform: translateX(-5px);
+    }
+  }
+}
+.btns .btn__2 {
+  &:hover {
+    background-color: rgba(36, 22, 11, 0.4);
+    border: 1px solid #ff8904;
+    color: #ff8904;
+  }
+}
+@media screen and (max-width: 576px) {
+  .btns .btn {
+    width: 90%;
+  }
+}
+.foot p {
+  font-size: 14px;
+  color: #737373;
+}
+.foot a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f66f14;
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    color: #ff8904;
+    text-decoration: underline;
+  }
+}
+.error-graphic-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -40px 0 20px 0; 
+}
+
+.sad-circle {
+  width: 140px;
+  height: 140px;
+  background-color: rgba(255, 105, 0, 0.05);
+  border: 1px solid rgba(255, 105, 0, 0.2);
+  border-radius: 50%;
+  position: relative;
+}
+
+.sad-icon {
+  font-size: 50px;
+  color: #ff6900;
+  filter: drop-shadow(0 0 10px rgba(255, 105, 0, 0.5));
+}
+
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(315deg, #f1ae00, #ff6900);
+  border-radius: 50%;
+}
+
+.dot-top-right {
+  top: 0px;
+  right: -20px;
+}
+
+.dot-bottom-left {
+  bottom: -5px;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  opacity: 0.6;
+}

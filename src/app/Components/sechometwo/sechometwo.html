@@ -1,0 +1,68 @@
+<section id="articles" class="py-5">
+  <div class="container py-5">
+    <div class="headin d-flex justify-content-between my-5">
+      <div class="right">
+        <span class="welc py-1 px-4 my-3 rounded-pill">مميز</span>
+        <h2>مقالات مختارة</h2>
+        <p>محتوى منتقى لبدء رحلة تعلمك</p>
+      </div>
+      <div class="left d-flex align-items-end py-2">
+        <button class="btn rounded-3 py-2 px-4">
+          عرض الكل<i class="fa-solid fa-angle-left"></i>
+        </button>
+      </div>
+    </div>
+
+    @for (item of featuredArticles; track $index) {
+      <div class="artic rounded rounded-4 overflow-hidden my-5">
+      <div class="row g-4 rounded rounded-5">
+        <div class="col-md-6">
+          <div class="inner">
+            <div class="artic__img">
+              <img class="w-100 d-block" [src]="item.image" alt="" />
+              <p class="rounded-pill py-1 px-3"><i class="fa-solid fa-star"></i> مميز</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inner">
+            <div class="artic__info d-flex flex-column">
+              <div class="contien">
+                <div class="catog d-flex align-items-center">
+                  <p class="welc py-1 px-4 ms-3 rounded-pill">{{ item.category }}</p>
+                  <p class="time">{{ item.readTime }} <i class="fa-regular fa-clock"></i></p>
+                </div>
+                <h3 class="my-3">{{ item.title }}</h3>
+
+                <p class="desc my-3">
+                  {{ item.excerpt }}
+                </p>
+              </div>
+
+              <div class="footer mt-5 d-flex justify-content-between">
+                <div class="pirson d-flex align-items-center">
+                  <div class="img">
+                    <img
+                      class="w-25 rounded-circle border border-2"
+                      [src]="item.author.avatar"
+                      alt=""
+                    />
+                  </div>
+                  <div class="text me-2">
+                    <h4>{{ item.author.name }}</h4>
+                    <p>{{ item.date }}</p>
+                  </div>
+                </div>
+                <button class="btn">أقرأ المقال<i class="fa-solid fa-arrow-left-long"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    }
+
+
+  </div>
+</section>

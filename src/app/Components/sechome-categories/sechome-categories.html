@@ -1,0 +1,26 @@
+<section id="categories" class="py-5">
+  <div class="container py-5">
+    <div class="heading m-auto">
+      <span class="welc py-2 px-4 rounded-pill">التصنيفات</span>
+      <h2>استكشف حسب الموضوع</h2>
+      <p>اعثر على محتوى مصمم حسب اهتماماتك</p>
+    </div>
+    <div class="categorir my-5">
+      <div class="row g-4">
+        @for (item of categoriList; track $index) {
+          <div class="col-md-3 col-6">
+          <div class="inner p-4 rounded-4 d-flex justify-content-between align-items-center">
+            <div>
+              <i class="icon1 rounded-3 mb-3 fa-solid fa-sun"></i>
+              <h6> {{item.name}} </h6>
+              <p> {{item.count}} مقالة</p>
+            </div>
+            <i class="icon2 rounded-circle fa-solid fa-angle-left"></i>
+          </div>
+        </div>
+        }
+
+      </div>
+    </div>
+  </div>
+</section>

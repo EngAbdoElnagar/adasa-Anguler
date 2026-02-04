@@ -1,0 +1,236 @@
+#articles {
+  min-height: 100vh;
+  padding: 60px 0;
+  background: linear-gradient(to left, #160f09, #0a0a0a);
+}
+#hero .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headin .right .welc {
+  display: block;
+  width: fit-content;
+  background-color: rgba(36, 22, 11, 0.4);
+  border: 1px solid #ff8904;
+  font-size: 14px;
+
+  color: #f97316;
+}
+.headin .right h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+.headin .right p {
+  font-size: 18px;
+  color: #a1a1a1;
+}
+.headin .left .btn {
+  background: linear-gradient(to left, #f54900, #ff6900);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  .fa-angle-left {
+    transition: all 0.3s;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    .fa-angle-left {
+      transform: translateX(-5px);
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .headin {
+    flex-direction: column;
+  }
+}
+/* ******************************* */
+
+.artic {
+  min-height: 400px;
+  transition: all 0.3s;
+  background-color: #161616 !important;
+  border: 1px solid #212529;
+  &:hover {
+    border-color: #ff6900 !important;
+  }
+}
+
+.artic .col-md-6,
+.artic .inner,
+.artic .inner .artic__img {
+  height: 100%;
+}
+
+.artic :hover .inner .artic__img img {
+  transform: scale(1.1);
+}
+
+.artic:hover .inner .artic__info h3 {
+  color: #ff6900;
+}
+
+.artic:hover .artic__info .footer .btn .fa-arrow-left-long {
+  transform: translateX(-10px);
+}
+.artic:hover .artic__info .footer .btn {
+  transform: translateX(10px);
+}
+.artic .inner .artic__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  img {
+    background-color: #000 !important;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+  }
+}
+.artic .inner .artic__img p {
+  position: absolute;
+  content: '';
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(to left, #f1b000, #ff6900);
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  .fa-star {
+    font-size: 10px;
+  }
+}
+.artic .inner .artic__info {
+  padding: 20px;
+}
+.artic .inner .artic__info .catog .welc {
+  width: fit-content;
+  background-color: rgba(36, 22, 11, 0.4);
+  border: 1px solid #ff8904;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f97316;
+}
+.artic .inner .artic__info {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.artic .inner .artic__info .catog .time {
+  font-size: 14px;
+  color: #737373;
+}
+.artic .inner .artic__info h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.artic .inner .artic__info .desc {
+  color: #a1a1a1;
+}
+.artic .inner .artic__info .footer .pirson .img img {
+  width: 40px !important;
+  height: 40px !important;
+}
+.artic .inner .artic__info .footer .pirson .text h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0;
+}
+.artic .inner .artic__info .footer .pirson .text p {
+  font-size: 12px;
+  color: #737373;
+  margin-bottom: 0;
+}
+.artic .inner .artic__info .footer .btn {
+  color: #f54900;
+  font-weight: 600;
+
+}
+.artic__img {
+  height: 100%;
+  overflow: hidden;
+}
+
+.artic__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .artic {
+    display: flex;
+  }
+
+  .artic .inner {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .artic .inner .artic__img {
+    height: 250px;
+  }
+  .artic .inner .artic__info {
+    height: auto;
+    padding: 20px;
+  }
+  /* ****** */
+    .artic {
+    height: auto;
+  }
+
+  .artic .inner {
+    height: auto;
+  }
+
+  .artic__img {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+.artic .row {
+  height: 100%;
+}
+.artic .col-md-6 {
+  display: flex;
+}
+.artic .inner {
+  flex: 1;
+}
+.artic__img {
+  height: 100%;
+  overflow: hidden;
+}
+
+.artic__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+

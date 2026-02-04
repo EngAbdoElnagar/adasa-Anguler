@@ -1,0 +1,104 @@
+<section id="blog" class="pt-5">
+  <div class="content pt-5">
+    <div class="headr my-5">
+      <p class="welc py-1 px-3 rounded-pill">مدونتنا</p>
+      <h1>استكشف <span>مقالاتنا</span></h1>
+      <p class="desc my-3">اكتشف الدروس والرؤى وأفضل الممارسات للتطوير الحديث</p>
+    </div>
+  </div>
+</section>
+<div class="main">
+  <div class="container">
+    <div class="nav-bar-link py-3">
+      <div class="row g-4 justify-content-between align-items-center">
+        <div class="col-md-4">
+          <div class="serch">
+            <input
+              class="form-control w-100 me-2"
+              type="search"
+              placeholder="ابحث في المقالات ..."
+              aria-label="Search"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="nav-category">
+            @for (cat of categories; track cat) {
+              <button (click)="setActive(cat)" [class.btn-active]="currentCat === cat" class="btn">
+                {{ cat === 'الكل' ? 'جميع المقالات' : cat }}
+              </button>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="top-bar">
+      <div class="container-bar">
+        <!-- Right -->
+        <div class="right-info">
+          <span
+            >عرض <strong> {{ AllDataList.length }} </strong> مقالات</span
+          >
+        </div>
+
+        <!-- Left -->
+        <div class="left-actions">
+          <button class="icon-btn" [class.active]="!isGridView" (click)="isGridView = false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <button class="icon-btn" [class.active]="isGridView" (click)="isGridView = true">
+            <i class="fa-solid fa-grip"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="latest my-5">
+      <div class="row g-4" [class.list-view]="!isGridView">
+        @for (item of AllDataList; track $index) {
+          <div [class]="isGridView ? 'col-lg-4 col-md-6' : 'col-12'">
+            <div class="inner h-100 rounded-4 overflow-hidden">
+              <div class="img-container">
+                <img [src]="item.image" alt="article title" />
+                <span class="badge-cat"> {{ item.category }} </span>
+              </div>
+
+              <div class="info-content py-3 px-2">
+                <p class="time mb-2">
+                  <i class="fa-regular fa-clock me-1"></i> {{ item.readTime }}
+                </p>
+                <h3 class="article-title">{{ item.title }}</h3>
+                <p class="desc">
+                  {{ item.excerpt }}
+                </p>
+
+                <div
+                  class="article-footer border-top d-flex justify-content-between align-items-center mt-4"
+                >
+                  <div class="person pt-3 d-flex align-items-center">
+                    <div class="avatar-wrapper me-2">
+                      <img
+                        [src]="item.author.avatar"
+                        alt="author"
+                        class="rounded-circle border border-secondary"
+                      />
+                    </div>
+                    <div class="author-meta mx-2">
+                      <h4 class="mb-0">{{ item.author.name }}</h4>
+                      <p class="mb-0">{{ item.author.role }}</p>
+                    </div>
+                  </div>
+                  <div class="action-icon">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
